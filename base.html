@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- meta -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		
+		<!-- link -->
+		<link rel="stylesheet" href="assets/plugins/animsition/css/animsition.min.css">
+		<link rel="stylesheet" href="assets/plugins/ladda/css/ladda.min.css">
+
+		<link href="assets/plugins/owl-carousel/css/owl.carousel.css" rel="stylesheet">
+		<link href="assets/plugins/owl-carousel/css/owl.theme.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="assets/css/montejo.css">
+		
+		<!-- title -->
+		<title>Montejo</title>
+	</head>
+	<body>
+		
+		
+		<!-- .animsition -->
+		<div class="animsition">
+			
+			<!-- .wrap -->
+			<div class="wrap selecciona-foto">
+
+				<!-- <button id="ladda-1" class="btn btn-primary ladda-button" data-style="zoom-out"><span class="ladda-label">click</span></button> -->
+
+				<!-- Btn Mostar Modal -->
+				<!-- <button id="modal-agregar-post-open" class="btn admin-agregar-btn-circle"><i class="ion ion-wand"></i></button> -->
+				
+				<!-- .carrusel -->
+				<div id="demo" class="carrusel">
+					
+					<h3>Selecciona tu foto</h3>
+
+					<div id="owl-demo" class="owl-carousel">
+						<div class="item"><img src="assets/images/foto/1.jpg" alt=""></div>
+						<div class="item"><img src="http://placehold.it/300x200" alt=""></div>
+						<div class="item"><img src="assets/images/foto/2.jpg" alt=""></div>
+						<div class="item"><img src="http://placehold.it/300x200" alt=""></div>
+						<div class="item"><img src="assets/images/foto/3.jpg" alt=""></div>
+						<div class="item"><img src="http://placehold.it/300x200" alt=""></div>
+						<div class="item"><img src="assets/images/foto/4.jpg" alt=""></div>
+						<div class="item"><img src="http://placehold.it/300x200" alt=""></div>
+						<div class="item"><img src="assets/images/foto/5.jpg" alt=""></div>
+						<div class="item"><img src="http://placehold.it/300x200" alt=""></div>
+						<div class="item"><img src="assets/images/foto/6.jpg" alt=""></div>
+						<div class="item"><img src="http://placehold.it/300x200" alt=""></div>
+						<!-- <div class="item"><img src="assets/images/foto/7.jpg" alt=""></div>
+						<div class="item"><img src="http://placehold.it/300x200" alt=""></div>
+						<div class="item"><img src="assets/images/foto/8.jpg" alt=""></div>
+						<div class="item"><img src="http://placehold.it/300x200" alt=""></div> -->
+					</div>
+						
+				</div>
+				<!-- end - .carrusel -->
+				
+				<!-- .montejo -->
+				<div class="montejo">
+					<img src="assets/images/montejo.png" alt="Montejo">
+				</div>
+				<!-- end - .montejo -->
+
+			</div>
+			<!-- end - .wrap -->
+
+			<!-- .modal -->
+			<div id="modal-agregar-post" class="modal modal-admin">
+
+				<!-- .modal-content -->
+				<div class="modal-content">
+
+					<!-- Brn Close -->
+					<span id="modal-agregar-post-close" class="modal-close"><i class="ion ion-close-round"></i></span>
+
+					<p>Este es mi modal</p>
+
+				</div>
+				<!-- end - .modal-content -->
+
+			</div>
+			<!-- end - .modal -->
+
+		</div>
+		<!-- end - .animsition -->
+		
+		<!-- script -->
+		<script src="assets/plugins/jquery/js/jquery.min.js"></script>
+		<script src="assets/plugins/animsition/js/animsition.min.js"></script>
+
+		<script src="assets/plugins/owl-carousel/js/owl.carousel.js"></script>
+
+		<script src="assets/plugins/ladda/js/spin.min.js"></script>
+		<script src="assets/plugins/ladda/js/ladda.min.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$("#owl-demo").owlCarousel({
+					autoPlay: 4000,
+					items : 4,
+					itemsDesktop : [1199,3],
+					itemsDesktopSmall : [979,2]
+				});
+			});
+		</script>
+
+		<script src="assets/js/montejo.js"></script>
+
+	</body>
+</html>

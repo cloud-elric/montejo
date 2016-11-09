@@ -1,0 +1,72 @@
+/*!
+	-----------------------------------------------------------------------------
+
+	6.0 - Compartir Facebook
+			# Extra
+
+	-----------------------------------------------------------------------------
+	*/
+
+/*  Compartir Facebook
+	===================================== */
+.compartir
+	overflow: hidden
+	position: relative
+	// Contendor
+	.compartir-cont
+		// align-items: center
+		background-color: $white
+		// display: flex
+		height: 100%
+		// justify-content: center
+		position: relative
+		width: 100%
+		// Marco
+		// .compartir-marco
+		// 	// background-color: rgba(red,.3)
+		// 	bottom: 0
+		// 	left: 0
+		// 	position: absolute
+		// 	right: 0
+		// 	top: 0
+		// 	z-index: 2
+		// 	img
+		// 		height: 100%
+		// 		width: 100%
+		// Foto
+		.compartir-foto
+			// background-image: url(../images/foto-compartir.png)
+			background-position: 50%
+			background-repeat: no-repeat
+			bottom: 1vh
+			left: 1vh
+			height: 100vh
+			overflow: hidden
+			position: absolute
+			right: 1vh
+			top: 1vh
+			width: calc(100% - 2vh)
+			z-index: 1
+			/* Portrait and Landscape */
+			@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)
+				background-size: contain
+
+			/* Portrait */
+			@media only screen  and (min-device-width: 768px)  and (max-device-width: 1024px)  and (orientation: portrait)  and (-webkit-min-device-pixel-ratio: 1)
+				background-size: contain
+
+			/* Landscape */
+			@media only screen  and (min-device-width: 768px)  and (max-device-width: 1024px)  and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 1)
+				background-size: contain
+
+		// Btn - Compartir
+		.btn
+			bottom: 20%
+			left: 50%
+			margin-left: -67px
+			position: absolute
+			width: 134px
+			z-index: 4
+			i.ion
+				font-size: 1.07em
+				margin-right: 8px

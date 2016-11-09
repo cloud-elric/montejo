@@ -1,0 +1,366 @@
+/*!
+	-----------------------------------------------------------------------------
+
+	2.0 - Basicos
+			# Basic
+			# Utility
+			# Extra
+
+	-----------------------------------------------------------------------------
+	*/
+
+/*  Basic
+	========================================================================== */
+*,
+*:after,
+*:before
+	box-sizing: border-box
+
+*
+	margin: 0
+	padding: 0
+
+body
+	background-color: #FFF
+	font:
+		family: $font-base
+		size: 16px
+		weight: 300
+	color: $text-base
+
+/* a */
+a
+	color: $primary-color
+	font:
+		family: $font-base
+		size: 16px
+		weight: 400
+	text-decoration: none
+	+transition(all 0.3s ease-in)
+	&:hover
+		color: $primary-color-light
+		text-decoration: none
+		+transition(all 0.3s ease-out)
+
+/* img */
+img
+	+transition(all 0.5s ease-in)
+
+/* Utility
+   ========================================================================== */
+/* h1 - h6 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6
+	font:
+		family: $font-base
+		weight: 400
+	margin: 0
+	padding: 0
+h1,
+.h1
+	font-size: 2.8em
+h2,
+.h2
+	font-size: 2.4em
+h3,
+.h3
+	font-size: 2em
+h4,
+.h4
+	font-size: 1.6em
+h5,
+.h5
+	font-size: 1.4em
+h6,
+.h6
+	font-size: 1.2em
+
+/* hr */
+hr
+	border: none
+	margin: 0
+
+/* Wrap*/
+.wrap
+	display: block
+	height: 768px
+	width: 1024px
+
+	/* Portrait and Landscape */
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)
+		// background-color: red
+		height: 1024px
+		width: 768px
+
+	/* Portrait */
+	@media only screen  and (min-device-width: 768px)  and (max-device-width: 1024px)  and (orientation: portrait)  and (-webkit-min-device-pixel-ratio: 1)
+		// background-color: purple
+		height: 1024px
+		width: 768px
+
+	/* Landscape */
+	@media only screen  and (min-device-width: 768px)  and (max-device-width: 1024px)  and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 1)
+		// background-color: green
+		height: 768px
+		width: 1024px
+
+	/* ----------- iPad 1 and 2 ----------- */
+	/* Portrait and Landscape */
+	@media only screen  and (min-device-width: 768px)  and (max-device-width: 1024px)  and (-webkit-min-device-pixel-ratio: 1)
+		// background-color: pink
+		height: 1024px
+		width: 768px
+
+	// /* Portrait */
+	@media only screen  and (min-device-width: 768px)  and (max-device-width: 1024px)  and (orientation: portrait)  and (-webkit-min-device-pixel-ratio: 1)
+		// background-color: orange
+		height: 1024px
+		width: 768px
+
+	// /* Landscape */
+	@media only screen  and (min-device-width: 768px)  and (max-device-width: 1024px)  and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 1)
+		// background-color: yellow
+		height: 768px
+		width: 1024px
+
+	/* ----------- iPad 3 and 4 ----------- */
+	/* Portrait and Landscape */
+	@media only screen  and (min-device-width: 768px)  and (max-device-width: 1024px)  and (-webkit-min-device-pixel-ratio: 2)
+		// background-color: blue
+		height: 1024px
+		width: 768px
+
+	// /* Portrait */
+	@media only screen  and (min-device-width: 768px)  and (max-device-width: 1024px)  and (orientation: portrait)  and (-webkit-min-device-pixel-ratio: 2)
+		// background-color: teal
+		height: 1024px
+		width: 768px
+
+	// /* Landscape */
+	@media only screen  and (min-device-width: 768px)  and (max-device-width: 1024px)  and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 2)
+		// background-color: navy
+		height: 768px
+		width: 1024px
+
+/*  Loader
+	================================================ */
+.loader
+	align-items: center
+	background-color: $white
+	bottom: 0
+	display: flex
+	height: 100vh
+	left: 0
+	justify-content: center
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 999
+
+/*  Btn
+    ================================================ */
+.btn
+	display: inline-block
+	font-weight: 400
+	line-height: 1.25
+	text-align: center
+	white-space: nowrap
+	vertical-align: middle
+	cursor: pointer
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	border: 1px solid transparent
+	padding: .5rem 1rem
+	font-size: 1rem
+	border-radius: .25rem
+	+box-shadow(2)
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus 
+	outline: none
+	outline-offset: -2px
+
+.btn:focus,
+.btn:hover
+	+box-shadow(3)
+	text-decoration: none
+
+.btn.focus 
+	text-decoration: none
+
+.btn.active,
+.btn:active 
+	background-image: none
+	outline: 0
+
+.btn.disabled,
+.btn:disabled 
+	cursor: not-allowed
+	opacity: .6
+
+// Primary
+.btn-primary 
+	color: $white
+	background-color: $primary-color
+	border-color: $primary-color
+
+.btn-primary:hover 
+	color: $white
+	background-color: $primary-color-light
+	border-color: $primary-color-light
+
+.btn-primary.focus,
+.btn-primary:focus 
+	color: $white
+	background-color: $primary-color-dark
+	border-color: $primary-color-dark
+
+.btn-primary.active,
+.btn-primary:active
+	color: $white
+	background-color: $primary-color-dark
+	border-color: $primary-color-dark
+	background-image: none
+
+// Secundary
+.btn-secundary 
+	color: $white
+	background-color: $secundary-color
+	border-color: $secundary-color
+
+.btn-secundary:hover 
+	color: $white
+	background-color: $secundary-color-light
+	border-color: $secundary-color-light
+
+.btn-secundary.focus,
+.btn-secundary:focus 
+	color: $white
+	background-color: $secundary-color-dark
+	border-color: $secundary-color-dark
+
+.btn-secundary.active,
+.btn-secundary:active
+	color: $white
+	background-color: $secundary-color-dark
+	border-color: $secundary-color-dark
+	background-image: none
+	
+/*  Modal
+	================================================ */
+.modal 
+	display: none
+	position: fixed
+	z-index: 19
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	overflow: auto
+	background-color: rgb(0,0,0)
+	background-color: rgba($black,0.4)
+	align-items: center
+	justify-content: center
+
+	// Modal Content
+	.modal-content
+		position: relative
+		background-color: #fefefe
+		margin: auto
+		max-height: 90vh
+		overflow-y: auto
+		padding: 0
+		border: none
+		width: 80%
+		max-width: 600px
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+		-webkit-animation-name: animatetop
+		-webkit-animation-duration: 0.4s
+		animation-name: animatetop
+		animation-duration: 0.4s
+
+	// Close Button
+	.close 
+		color: $white
+		float: right
+		font-size: 28px
+		font-weight: bold
+		&:hover,
+		&:focus 
+			color: #F2F2F2
+			text-decoration: none
+			cursor: pointer
+
+	// header
+	.modal-header 
+		background-color: $primary-color
+		color: $white
+		padding: 7px 20px
+		+respond-to(xs)
+			padding: 10px 20px
+		h2
+			font-size: 1.95em
+			+respond-to(sm)
+				font-size: 1.85em
+			+respond-to(xs)
+				font-size: 1.35em
+
+	// body
+	.modal-body
+		padding: 30px 20px
+		p
+			text-align: justify
+		.aceptar-terminos-condiciones-btn
+			background-color: #CCC
+			+border-radius(2px)
+			bottom: 40px
+			cursor: pointer
+			display: inline-block
+			left: 50%
+			margin-left: -140px
+			padding: 8px 20px
+			position: fixed
+			width: 320px
+			z-index: 99999
+			&:hover
+				background-color: #c3c3c3
+			+respond-to(xs)
+				margin-left: -40%
+				text-align: center
+				width: 80%
+			+respond-to(xx)
+				bottom: 23px
+
+// Animation
+@-webkit-keyframes animatetop 
+	from
+		top:-300px
+		opacity:0
+	to
+		top:0
+		opacity:1
+
+@keyframes animatetop 
+	from
+		top:-300px
+		opacity:0
+	to
+		top:0
+		opacity:1

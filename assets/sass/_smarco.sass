@@ -1,0 +1,135 @@
+/*!
+	-----------------------------------------------------------------------------
+
+	4.0 - Selecciona Marco
+			# Extra
+
+	-----------------------------------------------------------------------------
+	*/
+
+/*  Selecciona Marco
+	===================================== */
+.selecciona-marco
+	overflow: hidden
+	position: relative
+	// Carrusel
+	.carrusel
+		align-items: center
+		// background-color: greenyellow
+		display: flex
+		height: 100%
+		justify-content: center
+		position: relative
+		width: 100%
+		// h3
+		// 	background-color: rgba(red,.2)
+		// 	font-size: 2em
+		// 	font-style: italic
+		// 	left: 0
+		// 	position: absolute
+		// 	right: 0
+		// 	text-align: center
+		// 	top: 15%
+		// 	width: 100%
+		// Carousel
+		.owl-carousel
+			// background-color: red
+			position: relative
+			.owl-wrapper-outer
+				position: relative
+				// Bg de foto seleccionada
+				.bg-foto-seleccionada
+					// background-image: url(../images/foto.jpg)
+					background-position: 50%
+					background-repeat: no-repeat
+					background-size: cover
+					bottom: 3vh
+					left: 3vh
+					position: absolute
+					right: 3vh
+					top: 3vh
+					z-index: 1
+					/* Portrait and Landscape */
+					@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)
+						bottom: 3vh
+						left: 4vh
+						right: 4vh
+						top: 3vh
+
+					/* Portrait */
+					@media only screen  and (min-device-width: 768px)  and (max-device-width: 1024px)  and (orientation: portrait)  and (-webkit-min-device-pixel-ratio: 1)
+						bottom: 3vh
+						left: 4vh
+						right: 4vh
+						top: 3vh
+
+					/* Landscape */
+					@media only screen  and (min-device-width: 768px)  and (max-device-width: 1024px)  and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 1)
+						bottom: 3vh
+						left: 6vh
+						right: 6vh
+						top: 3vh
+
+				.owl-wrapper
+					position: relative
+					z-index: 3
+			// item
+			.owl-item
+				// background-color: rgba(blue,.4)
+				position: relative
+				z-index: 3
+				.item
+					+box-shadow(2)
+					margin: 0 30px
+					&:hover
+						+box-shadow(3)
+					&.item-active
+						+box-shadow(3)
+						position: relative
+						p
+							align-items: center
+							background-color: $primary-color
+							+border-radius(50%)
+							color: $white
+							display: flex
+							justify-content: center
+							height: 24px
+							position: absolute
+							right: 40px
+							top: 40px
+							width: 24px
+							i
+								color: $white
+								font-size: 1.4em
+					img
+						display: block
+						width: 100%
+						height: auto
+			// controles
+			.owl-controls
+				// background-color: rgba(red,.3)
+				margin-top: 0
+				opacity: 0
+	// Montejo
+	// .montejo
+	// 	// background-color: rgba(blue,.3)
+	// 	bottom: 6%
+	// 	height: 140px
+	// 	// height: 121px
+	// 	position: absolute
+	// 	right: 5%
+	// 	width: 123px
+	// 	// width: 105px
+	// 	img
+	// 		width: 100%
+
+	// Btn - Está me gusta
+	.btn
+		bottom: 12%
+		display: none
+		font-size: 1.2em
+		left: 50%
+		margin-left: -80px
+		position: absolute
+		width: 160px
+		z-index: 6
