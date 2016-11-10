@@ -1,53 +1,57 @@
 <?php
 
+use yii\helpers\Url;
+$this->registerJsFile ( '@web/webAssets/js/selecciona-foto.js', [
+		'depends' => [
+				\app\assets\AppAsset::className ()
+		]
+] );
 /* @var $this yii\web\View */
-
-$this->title = 'My Yii Application';
+$this->title = 'Seleccionar foto';
 ?>
-<div class="site-index">
+<!-- .animsition -->
+<div class="animsition">
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
+	<!-- .wrap -->
+	<div class="wrap selecciona-foto">
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+		<!-- .carrusel -->
+		<div id="demo" class="carrusel">
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
+			<h3>Selecciona tu foto</h3>
 
-    <div class="body-content">
+			<div id="selecciona-foto" class="owl-carousel">
+				<?php
+				$index = 1;
+				foreach($fotografias as $fotografia){
+				?>
+				<div data-value="<?=$fotografia->id?>" class="item <?=($index==1)?'item-activ':''?>">
+					<img  src="<?=Url::base()?>/uploads/<?=$fotografia->txt_url?>" alt="">
+					<!-- <p><i class='ion ion-android-done'></i></p> -->
+				</div>
+				
+				<?php 
+				$index++;
+				}?>
+			</div>
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+		</div>
+		<!-- end - .carrusel -->
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+		<!-- .montejo -->
+		<div class="montejo">
+			<img src="<?=Url::base()?>/webAssets/images/montejo.png" alt="Montejo">
+		</div>
+		<!-- end - .montejo -->
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+		<!-- Btn - Está me gusta -->
+		<button id="selecciona-foto-btn" class="btn btn-primary ladda-button"
+			data-style="zoom-out">
+			<span class="ladda-label">Esta me gusta</span>
+		</button>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+	</div>
+	<!-- end - .wrap -->
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
-
-    </div>
 </div>
+<!-- end - .animsition -->
