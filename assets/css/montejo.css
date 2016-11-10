@@ -891,19 +891,6 @@ hr {
   padding: 6px 10px 4px;
 }
 
-.registro .registro-cont .registro-box .registro-body .registro-body-form .help-block.help-block-error {
-  background-color: rgba(255, 0, 0, 0.8);
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  border-radius: 3px;
-  display: none;
-  color: #FFF;
-  margin-top: 8px;
-  padding: 8px 10px 2px;
-  text-align: center;
-}
-
 .registro .registro-cont .registro-box .registro-body .registro-body-form .aviso-privacidad {
   bottom: 20px;
   left: 30px;
