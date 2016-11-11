@@ -461,6 +461,10 @@ hr {
   }
 }
 
+.modal .modal-body .btn {
+  margin-top: 30px;
+}
+
 @-webkit-keyframes animatetop {
   from {
     top: -300px;
@@ -746,7 +750,6 @@ hr {
 
 .registro .registro-cont {
   align-items: center;
-  background-color: #4254BD;
   display: flex;
   height: 100%;
   justify-content: center;
@@ -768,37 +771,6 @@ hr {
   padding: 23px 0;
   position: relative;
   width: 90%;
-}
-
-.registro .registro-cont .registro-box .registro-header {
-  margin-top: -80px;
-  text-align: center;
-  /* Portrait and Landscape */
-  /* Portrait */
-  /* Landscape */
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  .registro .registro-cont .registro-box .registro-header {
-    margin-top: -80px;
-  }
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  .registro .registro-cont .registro-box .registro-header {
-    margin-top: -80px;
-  }
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
-  .registro .registro-cont .registro-box .registro-header {
-    margin-top: -50px;
-  }
-}
-
-.registro .registro-cont .registro-box .registro-header img {
-  height: 140px;
-  width: 123px;
 }
 
 .registro .registro-cont .registro-box .delay-0 {
@@ -832,21 +804,16 @@ hr {
 }
 
 .registro .registro-cont .registro-box .delay-6 {
-  -webkit-animation-delay: 1.30s;
-  animation-delay: 1.30s;
-}
-
-.registro .registro-cont .registro-box .delay-7 {
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
 }
 
-.registro .registro-cont .registro-box .delay-8 {
+.registro .registro-cont .registro-box .delay-7 {
   -webkit-animation-delay: 0.35s;
   animation-delay: 0.35s;
 }
 
-.registro .registro-cont .registro-box .delay-9 {
+.registro .registro-cont .registro-box .delay-8 {
   -webkit-animation-delay: 0.55s;
   animation-delay: 0.55s;
 }
