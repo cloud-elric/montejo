@@ -23,10 +23,7 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body style="background-image: url(<?=Url::base()?>/webAssets/images/b.png); 
-    background-position: 50%, 50%;
-    background-size: cover;
-    background-repeat: no-repeat;">
+<body>
 <?php $this->beginBody() ?>
         <?= $content ?>
 
