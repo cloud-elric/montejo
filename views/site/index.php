@@ -12,7 +12,10 @@ $this->title = 'Seleccionar foto';
 <div class="animsition">
 
 	<!-- .wrap -->
-	<div class="wrap selecciona-foto">
+	<div class="wrap selecciona-foto" style="background-image: url(<?=Url::base()?>/webAssets/images/b.png); 
+    background-position: 50%, 50%;
+    background-size: cover;
+    background-repeat: no-repeat;">
 
 		<!-- .carrusel -->
 		<div id="demo" class="carrusel">
