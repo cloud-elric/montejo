@@ -1017,6 +1017,7 @@ hr {
 
 .registro .registro-cont .registro-box .registro-body .registro-body-form .aviso-privacidad-cont .aviso-privacidad-mask {
   bottom: 0;
+  cursor: pointer;
   height: 100%;
   left: 0;
   position: absolute;
@@ -1028,6 +1029,52 @@ hr {
 
 .registro .registro-cont .registro-box .registro-body .registro-body-form .btn-primary {
   margin-top: 25px;
+  padding: 12px 1rem;
+  width: 100%;
+}
+
+.registro .registro-cont .registro-box .registro-body .aqua-body-succes {
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  height: 364px;
+  justify-content: space-around;
+  padding: 34px 30px 30px;
+}
+
+.registro .registro-cont .registro-box .registro-body .aqua-body-succes .aqua-body-succes-cont {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.registro .registro-cont .registro-box .registro-body .aqua-body-succes .aqua-body-succes-cont .aqua-body-succes-cont-icon {
+  align-items: center;
+  background-color: purple;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  color: #FFF;
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  width: 55px;
+}
+
+.registro .registro-cont .registro-box .registro-body .aqua-body-succes .aqua-body-succes-cont .aqua-body-succes-cont-icon i {
+  font-size: 2.6em;
+}
+
+.registro .registro-cont .registro-box .registro-body .aqua-body-succes .aqua-body-succes-cont p {
+  color: purple;
+  font-size: 1.3em;
+  margin-top: 35px;
+}
+
+.registro .registro-cont .registro-box .registro-body .aqua-body-succes .aqua-body-succes-btn {
+  margin-bottom: -24px;
   padding: 12px 1rem;
   width: 100%;
 }
