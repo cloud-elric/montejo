@@ -14,19 +14,12 @@ $this->title = 'Registro';
 <div class="animsition">
 
 	<!-- .wrap -->
-	<div class="wrap registro">
+	<div class="wrap registro" style="background-image: url(<?=Url::base()?>/webAssets/images/b.png); background-position: 50%, 50%; background-size: cover; background-repeat: no-repeat;">
 
 		<!-- .registro-cont -->
 		<div class="registro-cont">
 
 			<div class="registro-box">
-
-				<!-- .registro-header -->
-				<div class="registro-header animated">
-					<!--  <img src="<?=Url::base()?>/webAssets/images/montejo.png"
-						alt="Montejo">-->
-				</div>
-				<!-- end - .registro-header -->
 
 				<!-- .registro-body -->
 				<div class="registro-body">

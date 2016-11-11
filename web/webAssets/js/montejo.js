@@ -116,7 +116,11 @@ $(document).ready(function(){
 		
 	});
 
+
 }); // end - READY
+
+
+
 
 function validarSoloNumeros(e){
 	 // Allow: backspace, delete, tab, escape, enter and .
