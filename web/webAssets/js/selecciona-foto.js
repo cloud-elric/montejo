@@ -20,6 +20,12 @@
 var fotografiaSeleccionada = 0;
 
 $(document).ready(function(){
+	
+	$('#js-time').on('change', function(){
+		var timeSelected = $(this).val();
+		
+		window.location = basePath+"?time="+timeSelected;
+	});
 
 	/**
 	 * Animsition
