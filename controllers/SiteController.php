@@ -104,7 +104,7 @@ class SiteController extends Controller {
 			$usuario->txt_url_image = $this->guardarImagenUsuario($fotografiaSeleccionada, $marcoSeleccionado);
 			
 			if($usuario->save()){
-				$this->goHome();
+				//$this->goHome();
 			}
 			
 			
@@ -118,14 +118,18 @@ class SiteController extends Controller {
 	private function guardarImagenUsuario($fotografiaSeleccionada, $marcoSeleccionado){
 		
 		
-		list($width_x, $height_x) = getimagesize('uploads/'.$fotografiaSeleccionada->txt_url);
+// 		list($width_x, $height_x) = getimagesize('uploads/'.$fotografiaSeleccionada->txt_url);
 		
-		$this->rezisePicture ( 'uploads/'.$fotografiaSeleccionada->txt_url, $width_x, $height_x, 640, 'uploads/re'.$fotografiaSeleccionada->txt_url );
+// 		$this->rezisePicture ( 'uploads/'.$fotografiaSeleccionada->txt_url, $width_x, $height_x, 640, 'uploads/re'.$fotografiaSeleccionada->txt_url );
 		
 		
-		$nombreImagenFinal = Utils::generateToken('montaje_').'.png';
-		$this->mergeImagen('uploads/re'.$fotografiaSeleccionada->txt_url, 'webAssets/images/marcos/'.$marcoSeleccionado->txt_url, $nombreImagenFinal);
+		$nombreImagenFinal = Utils::generateToken('montaje_');
+		$this->mergeImagen('uploads/'.$fotografiaSeleccionada->txt_url, 'webAssets/images/marcos/'.$marcoSeleccionado->txt_url, $nombreImagenFinal);
 		return $nombreImagenFinal;
+	}
+	
+	private function crearLienzo(){
+		return imagecreatetruecolor ( 1280 , 960);
 	}
 	
 /**
@@ -135,18 +139,29 @@ class SiteController extends Controller {
  */
 	private function mergeImagen($imageJpg, $imagePng, $nombreImagenFinal){
 	$dest = imagecreatefromjpeg($imageJpg);
-	$src = imagecreatefrompng($imagePng);
+	
 	
 	list($width_x, $height_x) = getimagesize($imageJpg);
 	list($width_y, $height_y) = getimagesize($imagePng);
 	
-	imagecopyresampled($dest, $src, 0, 0, 0, 0, $width_x, $height_x, $width_y, $height_y);
+	$lienzo = $this->crearLienzo();
+	
+	imagecopyresampled($lienzo, $dest, 0, 120, 0, 0, $width_x, $height_x, $width_x, $height_x);
 	
 	// Usar imagejpg() si el resultado del merge se quiere en jpg
-	imagepng($dest, $nombreImagenFinal);
+	imagejpeg($lienzo, 'fotosUsuarios/template'.$nombreImagenFinal.'.jpg');
+	
+	$template = imagecreatefromjpeg('fotosUsuarios/template'.$nombreImagenFinal.'.jpg');
+	
+	$src = imagecreatefrompng($imagePng);
+	echo imagecopyresampled($template, $src, 0, 0, 0, 0, 100, 100, $width_y, $height_y);
+	imagejpeg($lienzo, 'fotosUsuarios/'.$nombreImagenFinal.'.jpg');
 	
 	imagedestroy($dest);
 	imagedestroy($src);
+	imagedestroy($template);
+	
+	unlink('fotosUsuarios/template'.$nombreImagenFinal.'.jpg');
 	
 }
 	
@@ -178,8 +193,11 @@ class SiteController extends Controller {
 	
 	public function actionTest(){
 		
+		$fotografiaSeleccionada = $this->getFotoById(70);
+		$marcoSeleccionado = $this->getMarcoById(1);
 		
-		$this->rezisePicture ( $dirBase . "/" . $iuf, $width, $height, 1280, $nombreNuevo );
+		
+		$this->guardarImagenUsuario($fotografiaSeleccionada, $marcoSeleccionado);
 	}
 	
 	
@@ -223,4 +241,6 @@ class SiteController extends Controller {
 	
 		return $factor;
 	}
+	
+	
 }
