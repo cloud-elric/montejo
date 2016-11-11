@@ -14,6 +14,7 @@ use yii\web\NotFoundHttpException;
 use app\models\EntUsuarios;
 use app\models\Utils;
 use yii\web\Response;
+use yii\data\ActiveDataProvider;
 
 class SiteController extends Controller {
 	/**
@@ -69,14 +70,34 @@ class SiteController extends Controller {
 	 *
 	 * @return string
 	 */
-	public function actionIndex($time = null) {
-		if ($time) {
-			$fotografias = $this->dateSelected ( $time );
-		} else {
-			$fotografias = WrkFotos::find ()->where ( 'fch_recepcion > DATE_SUB(NOW(), INTERVAL 30 MINUTE)' )->all ();
-		}
+	public function actionIndex($page=0) {
+		
+		$fotografias= WrkFotos::find()->all();
+		
+		$query = WrkFotos::find();
+		
+		$order = [
+				'fch_recepcion' => 'asc'
+		];
+		
+		// Carga el dataprovider
+		$dataProvider = new ActiveDataProvider( [
+				'query' => $query,
+				'sort' => [
+						'defaultOrder' => $order
+				],
+				'pagination' => [
+						'pageSize' => 20,
+						'page' => $page
+				]
+		] );
+		
+		//return $dataProvider->getModels ();
+		
+		
 		return $this->render ( 'index', [ 
-				'fotografias' => $fotografias 
+				'fotografias' => $fotografias,
+				'dataProvider'=>$dataProvider
 		] );
 	}
 	private function dateSelected($time) {

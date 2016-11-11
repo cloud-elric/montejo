@@ -63,7 +63,7 @@ $(document).ready(function(){
 	$('#compartir-btn').click(function(e){
 		e.preventDefault();
 		var l = Ladda.create(this);
-		l.start();
+		//l.start();
 		
 		
 	});
