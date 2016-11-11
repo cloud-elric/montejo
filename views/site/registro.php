@@ -85,25 +85,25 @@ $this->registerJsFile ( '@web/webAssets/js/montejo.js', [
 
 
 					<!-- .aqua-body-succes -->
-					<div class="aqua-body-succes">
-						<!-- .aqua-body-succes-cont -->
-						<div class="aqua-body-succes-cont">
-							<!-- .aqua-body-succes-cont -->
-							<div class="aqua-body-succes-cont-icon animated">
+					<div class="registro-body-succes">
+						<!-- .registro-body-succes-cont -->
+						<div class="registro-body-succes-cont">
+							<!-- .registro-body-succes-cont -->
+							<div class="registro-body-succes-cont-icon animated">
 								<i class="ion ion-checkmark"></i>
 							</div>
-							<!-- end - .aqua-body-succes-cont -->
+							<!-- end - .registro-body-succes-cont -->
 							<p class="animated">Registro Exitoso</p>
 						</div>
-						<!-- end - .aqua-body-succes-cont -->
+						<!-- end - .registro-body-succes-cont -->
 
-						<!-- .aqua-body-succes-btn -->
-						<button class="btn btn-primary aqua-body-succes-btn js-btn-continuar ladda-button animated" data-style="zoom-out">
+						<!-- .registro-body-succes-btn -->
+						<button class="btn btn-primary registro-body-succes-btn js-btn-continuar ladda-button animated" data-style="zoom-out">
 							<span class="ladda-label">Continuar</span>
 						</button>
-						<!-- end - .aqua-body-succes-btn -->
+						<!-- end - .registro-body-succes-btn -->
 					</div>
-					<!-- end - .aqua-body-succes -->
+					<!-- end - .registro-body-succes -->
 
 				</div>
 				<!-- end - .registro-body -->

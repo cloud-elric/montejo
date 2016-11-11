@@ -134,6 +134,11 @@ function validarSoloNumeros(e){
    }
 }
 
+
+function registroExitoso(){
+	$(".registro-body-form").hide();
+	$(".registro-body-succes").show();
+}
 /**
  * ----------------------------
  *		Click Window
