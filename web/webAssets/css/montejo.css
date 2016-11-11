@@ -528,10 +528,10 @@ hr {
   justify-content: center;
   left: 50%;
   list-style: none;
-  margin-left: -200px;
+  margin-left: -270px;
   position: absolute;
   top: 22%;
-  width: 400px;
+  width: 540px;
 }
 
 .selecciona-foto .carrusel .pagination li {

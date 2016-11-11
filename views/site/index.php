@@ -17,7 +17,7 @@ $this->title = 'Seleccionar foto';
 	
 		<!-- .carrusel -->
 		<div id="demo" class="carrusel">
-	
+
 			<h3>Selecciona tu foto</h3>
 
 			<?php
@@ -31,7 +31,8 @@ $this->title = 'Seleccionar foto';
 			?>
 			
 			<?php echo $widget->renderPager(); ?>
-
+			
+			<!-- .owl-carousel -->
 			<div id="selecciona-foto" class="owl-carousel">
 				<?php echo $widget->renderItems(); ?>
 			</div>
