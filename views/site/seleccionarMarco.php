@@ -7,6 +7,8 @@ $this->registerJsFile ( '@web/webAssets/js/selecciona-marco.js', [
 				\app\assets\AppAsset::className ()
 		]
 ] );
+
+$this->title = 'Seleccionar marco';
 ?>
 <!-- .animsition -->
 		<div class="animsition">

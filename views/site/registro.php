@@ -7,6 +7,8 @@ $this->registerJsFile ( '@web/webAssets/js/montejo.js', [
 				\app\assets\AppAsset::className () 
 		] 
 ] );
+
+$this->title = 'Registro';
 ?>
 <!-- .animsition -->
 <div class="animsition">

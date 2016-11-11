@@ -12,6 +12,8 @@ $this->registerJsFile ( '@web/webAssets/js/sharing.js', [
 				\app\assets\AppAsset::className ()
 		]
 ] );
+
+$this->title = 'Ver imagen';
 ?>
 <!-- .animsition -->
 <div class="animsition">
