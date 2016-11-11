@@ -17,13 +17,10 @@ $this->title = 'Seleccionar foto';
 	
 		<!-- .carrusel -->
 		<div id="demo" class="carrusel">
-
+	
 			<h3>Selecciona tu foto</h3>
-<<<<<<< HEAD
-			
-			<div id="selecciona-foto" class="owl-carousel">
-				<?php 
-				
+
+			<?php
 				$widget = ListView::begin([
 						'dataProvider' => $dataProvider,
 						'itemView' => '_itemImage',
@@ -31,14 +28,13 @@ $this->title = 'Seleccionar foto';
 						'options'=>['class'=>'owl-carousel'],
 						'layout' => "{pager}\n{items}\n{summary}",
 				]);
-				
-				echo $widget->renderItems();
-
-				
-				?>
-			</div>
+			?>
 			
 			<?php echo $widget->renderPager(); ?>
+
+			<div id="selecciona-foto" class="owl-carousel">
+				<?php echo $widget->renderItems(); ?>
+			</div>
 
 		</div>
 		<!-- end - .carrusel -->

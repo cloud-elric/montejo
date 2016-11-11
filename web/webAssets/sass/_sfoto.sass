@@ -22,7 +22,7 @@
 		position: relative
 		width: 100%
 		h3
-			// background-color: rgba(red,.2)
+			// background-color: rgba(yellow,.2)
 			font-size: 2em
 			font-style: italic
 			left: 0
@@ -31,8 +31,32 @@
 			text-align: center
 			top: 15%
 			width: 100%
-		// Select
-		.carrusel-select
+		// Pagination
+		.pagination
+			align-items: center
+			// background-color: rgba(red,.5)
+			display: flex
+			justify-content: center
+			left: 50%
+			list-style: none
+			margin-left: -200px
+			position: absolute
+			top: 22%
+			width: 400px
+			li
+				background-color: rgba(blue,.1)
+				margin: 0 4px
+				padding: 4px 12px
+				span
+					color: $primary-color
+				a
+					color: $primary-color
+					&:hover
+						color: $primary-color-light
+				&.active
+					background-color: $primary-color
+					a
+						color: $white
 		// Carousel
 		.owl-carousel
 			// .owl-wrapper-outer
@@ -93,6 +117,14 @@
 		position: absolute
 		width: 160px
 		z-index: 6
+
+// .pagination
+// 	background-color: rgba(red,.5)
+	// left: 50%
+	// margin-left: -175px
+	// position: absolute
+	// top: 22%
+	// width: 350px
 
 // SELECT
 // /* Reset Select */

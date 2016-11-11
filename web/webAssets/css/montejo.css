@@ -522,6 +522,44 @@ hr {
   width: 100%;
 }
 
+.selecciona-foto .carrusel .pagination {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  list-style: none;
+  margin-left: -200px;
+  position: absolute;
+  top: 22%;
+  width: 400px;
+}
+
+.selecciona-foto .carrusel .pagination li {
+  background-color: rgba(0, 0, 255, 0.1);
+  margin: 0 4px;
+  padding: 4px 12px;
+}
+
+.selecciona-foto .carrusel .pagination li span {
+  color: #1F1475;
+}
+
+.selecciona-foto .carrusel .pagination li a {
+  color: #1F1475;
+}
+
+.selecciona-foto .carrusel .pagination li a:hover {
+  color: #170f58;
+}
+
+.selecciona-foto .carrusel .pagination li.active {
+  background-color: #1F1475;
+}
+
+.selecciona-foto .carrusel .pagination li.active a {
+  color: #FFF;
+}
+
 .selecciona-foto .carrusel .owl-carousel .owl-item .item {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   margin: 0 6px;

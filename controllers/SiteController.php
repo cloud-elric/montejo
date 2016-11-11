@@ -70,7 +70,7 @@ class SiteController extends Controller {
 	 *
 	 * @return string
 	 */
-	public function actionIndex($page=0) {
+	public function actionIndex() {
 		
 		$fotografias= WrkFotos::find()->all();
 		
@@ -88,7 +88,6 @@ class SiteController extends Controller {
 				],
 				'pagination' => [
 						'pageSize' => 20,
-						'page' => $page
 				]
 		] );
 		
