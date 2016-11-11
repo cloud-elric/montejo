@@ -38,11 +38,11 @@ $this->title = 'Seleccionar foto';
 		</div>
 		<!-- end - .carrusel -->
 
-		<!-- .montejo -->
+		<!-- .montejo
 		<div class="montejo">
 			<img src="<?=Url::base()?>/webAssets/images/montejo.png" alt="Montejo">
 		</div>
-		<!-- end - .montejo -->
+		end - .montejo -->
 
 		<!-- Btn - Está me gusta -->
 		<button id="selecciona-foto-btn" class="btn btn-primary ladda-button"

@@ -8,6 +8,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -22,7 +23,10 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body>
+<body style="background-image: url(<?=Url::base()?>/webAssets/images/b.png); 
+    background-position: 50%, 50%;
+    background-size: cover;
+    background-repeat: no-repeat;">
 <?php $this->beginBody() ?>
         <?= $content ?>
 

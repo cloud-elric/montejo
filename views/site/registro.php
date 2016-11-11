@@ -31,6 +31,7 @@ $this->registerJsFile ( '@web/webAssets/js/montejo.js', [
 					<?php
 
 						$form = ActiveForm::begin ( [ 
+						'id'=>'enviar-registro',
 						'options' => [ 
 						'class' => 'registro-body-form' 
 						],
@@ -98,9 +99,9 @@ $this->registerJsFile ( '@web/webAssets/js/montejo.js', [
 						<!-- end - .registro-body-succes-cont -->
 
 						<!-- .registro-body-succes-btn -->
-						<button class="btn btn-primary registro-body-succes-btn js-btn-continuar ladda-button animated" data-style="zoom-out">
+						<a class="btn btn-primary registro-body-succes-btn js-btn-continuar ladda-button animated" data-style="zoom-out" href="home">
 							<span class="ladda-label">Continuar</span>
-						</button>
+						</a>
 						<!-- end - .registro-body-succes-btn -->
 					</div>
 					<!-- end - .registro-body-succes -->

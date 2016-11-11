@@ -1,0 +1,44 @@
+[01-Jun-2016 17:06:58 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'beto2gom_leonrey'@'ip-104-238-125-158.ip.secureserver.net' (using password: YES) in /home/unahistoriaparac/public_html/rleon/inc/con.php on line 9
+[01-Jun-2016 17:13:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/unahistoriaparac/public_html/rleon/reporteCsv.php:28) in /home/unahistoriaparac/public_html/rleon/reporteCsv.php on line 37
+[01-Jun-2016 17:13:31 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/unahistoriaparac/public_html/rleon/reporteCsv.php:28) in /home/unahistoriaparac/public_html/rleon/reporteCsv.php on line 39
+[23-Jun-2016 23:26:09 UTC] PHP Warning:  include(inc/con.php): failed to open stream: No such file or directory in /home/unahistoriaparac/public_html/rleon/addReporte.php on line 3
+[23-Jun-2016 23:26:09 UTC] PHP Warning:  include(): Failed opening 'inc/con.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/unahistoriaparac/public_html/rleon/addReporte.php on line 3
+[23-Jun-2016 23:26:09 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/unahistoriaparac/public_html/rleon/addReporte.php on line 20
+[23-Jun-2016 23:33:23 UTC] PHP Warning:  include(inc/con.php): failed to open stream: No such file or directory in /home/unahistoriaparac/public_html/rleon/addReporte.php on line 3
+[23-Jun-2016 23:33:23 UTC] PHP Warning:  include(): Failed opening 'inc/con.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/unahistoriaparac/public_html/rleon/addReporte.php on line 3
+[23-Jun-2016 23:33:23 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/unahistoriaparac/public_html/rleon/addReporte.php on line 20
+[23-Jun-2016 23:36:47 UTC] PHP Warning:  include(inc/con.php): failed to open stream: No such file or directory in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:36:47 UTC] PHP Warning:  include(): Failed opening 'inc/con.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:36:47 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/unahistoriaparac/public_html/rleon/reporte.php on line 135
+[23-Jun-2016 23:37:14 UTC] PHP Warning:  include(inc/con.php): failed to open stream: No such file or directory in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:37:14 UTC] PHP Warning:  include(): Failed opening 'inc/con.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:37:14 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/unahistoriaparac/public_html/rleon/reporte.php on line 135
+[23-Jun-2016 23:40:34 UTC] PHP Warning:  include(inc/con.php): failed to open stream: No such file or directory in /home/unahistoriaparac/public_html/rleon/addReporte.php on line 3
+[23-Jun-2016 23:40:34 UTC] PHP Warning:  include(): Failed opening 'inc/con.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/unahistoriaparac/public_html/rleon/addReporte.php on line 3
+[23-Jun-2016 23:40:34 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/unahistoriaparac/public_html/rleon/addReporte.php on line 20
+[23-Jun-2016 23:40:38 UTC] PHP Warning:  include(inc/con.php): failed to open stream: No such file or directory in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:40:38 UTC] PHP Warning:  include(): Failed opening 'inc/con.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:40:38 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/unahistoriaparac/public_html/rleon/reporte.php on line 135
+[23-Jun-2016 23:41:09 UTC] PHP Warning:  include(inc/con.php): failed to open stream: No such file or directory in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:41:09 UTC] PHP Warning:  include(): Failed opening 'inc/con.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:41:09 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/unahistoriaparac/public_html/rleon/reporte.php on line 135
+[23-Jun-2016 23:41:36 UTC] PHP Warning:  include(inc/con.php): failed to open stream: No such file or directory in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:41:36 UTC] PHP Warning:  include(): Failed opening 'inc/con.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:41:36 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/unahistoriaparac/public_html/rleon/reporte.php on line 135
+[23-Jun-2016 23:41:37 UTC] PHP Warning:  include(inc/con.php): failed to open stream: No such file or directory in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:41:37 UTC] PHP Warning:  include(): Failed opening 'inc/con.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:41:37 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/unahistoriaparac/public_html/rleon/reporte.php on line 135
+[23-Jun-2016 23:42:19 UTC] PHP Warning:  include(inc/con.php): failed to open stream: No such file or directory in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:42:19 UTC] PHP Warning:  include(): Failed opening 'inc/con.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:42:19 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/unahistoriaparac/public_html/rleon/reporte.php on line 135
+[23-Jun-2016 23:46:53 UTC] PHP Warning:  include(inc/con.php): failed to open stream: No such file or directory in /home/unahistoriaparac/public_html/rleon/addReporte.php on line 3
+[23-Jun-2016 23:46:53 UTC] PHP Warning:  include(): Failed opening 'inc/con.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/unahistoriaparac/public_html/rleon/addReporte.php on line 3
+[23-Jun-2016 23:46:53 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/unahistoriaparac/public_html/rleon/addReporte.php on line 20
+[23-Jun-2016 23:46:59 UTC] PHP Warning:  include(inc/con.php): failed to open stream: No such file or directory in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:46:59 UTC] PHP Warning:  include(): Failed opening 'inc/con.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/unahistoriaparac/public_html/rleon/reporte.php on line 30
+[23-Jun-2016 23:46:59 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/unahistoriaparac/public_html/rleon/reporte.php on line 135
+[23-Jun-2016 23:50:29 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'unahisto_leonrey'@'localhost' (using password: YES) in /home/unahistoriaparac/public_html/rleon/inc/con.php on line 17
+[23-Jun-2016 23:53:00 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'unahisto_leonrey'@'localhost' (using password: YES) in /home/unahistoriaparac/public_html/rleon/inc/con.php on line 17
+[23-Jun-2016 23:53:47 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'unahisto_leonre'@'localhost' (using password: YES) in /home/unahistoriaparac/public_html/rleon/inc/con.php on line 17
+[23-Jun-2016 23:54:21 UTC] PHP Warning:  mysqli::mysqli(): (42000/1044): Access denied for user 'unahisto__leonre'@'localhost' to database 'unahisto_2gom_rey_leon' in /home/unahistoriaparac/public_html/rleon/inc/con.php on line 17
+[05-Nov-2016 21:40:55 UTC] PHP Warning:  file_get_contents(http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&amp;password=Pakabululu01&amp;message=Puedes+descargar+tu+imagen+del+Rey+Leon+aqui+http%3A%2F%2Funahistoriaparacontar.com%2Frleon%2Fuploads%2FKing2-581e51abc5f56.jpg&amp;numbers=8771407910): failed to open stream: Connection timed out in /home/unahistoriaparac/public_html/rleon/addReporte.php on line 57

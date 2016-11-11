@@ -52,13 +52,13 @@ $(document).ready(function(){
 	 * Ladda
 	 */
 	// registro
-	$('#registro-btn').click(function(e){
-		e.preventDefault();
-		var l = Ladda.create(this);
-		l.start();
-		
-		$('form').submit();
-	});
+//	$('#registro-btn').click(function(e){
+//		e.preventDefault();
+//		var l = Ladda.create(this);
+//		l.start();
+//		
+//		$('form').submit();
+//	});
 	// compartir
 	$('#compartir-btn').click(function(e){
 		e.preventDefault();
@@ -160,3 +160,57 @@ $(window).bind("click touchstart", function(){
 		modal.style.display = "none";
 	}
 });
+
+
+$('body').on(
+		'beforeSubmit',
+		'#enviar-registro',
+		function() {
+			var form = $(this);
+			// return false if form still have some validation errors
+			if (form.find('.has-error').length) {
+				return false;
+			}
+			
+			
+			
+			var button = document.getElementById('registro-btn');
+			var l = Ladda.create(button);
+			l.start();
+
+			// submit form
+			$.ajax({
+				url : form.attr('action'),// url para peticion
+				type : 'post', // Metodo en el que se enviara la informacion
+				data : form.serialize(), // La informacion a mandar
+				dataType : 'json', // Tipo de respuesta
+				success : function(response) { // Cuando la peticion sea
+												// exitosamente se ejecutara la
+												// funcion
+					// Si la respuesta contiene la propiedad status y es success
+					if (response.hasOwnProperty('status')
+							&& response.status == 'success') {
+
+						registroExitoso();
+
+					} else {
+
+						// Muestra los errores
+						$('#enviar-registro').yiiActiveForm('updateMessages',
+								response, true);
+					}
+
+					l.stop();
+				},
+				error:function(){
+					l.stop();
+				},
+				statusCode : {
+					404 : function() {
+						alert("page not found");
+					}
+				}
+
+			});
+			return false;
+		});

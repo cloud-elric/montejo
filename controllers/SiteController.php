@@ -13,6 +13,7 @@ use app\models\CatMarcos;
 use yii\web\NotFoundHttpException;
 use app\models\EntUsuarios;
 use app\models\Utils;
+use yii\web\Response;
 
 class SiteController extends Controller {
 	/**
@@ -101,9 +102,21 @@ class SiteController extends Controller {
 		$usuario = new EntUsuarios();
 		
 		if ($usuario->load ( Yii::$app->request->post () )) {
-			$usuario->txt_url_image = $this->guardarImagenUsuario($fotografiaSeleccionada, $marcoSeleccionado);
+			Yii::$app->response->format = Response::FORMAT_JSON;
+			$usuario->txt_url_image = $this->guardarImagenUsuario($fotografiaSeleccionada, $marcoSeleccionado).".jpg";
 			
 			if($usuario->save()){
+				
+				$urlCorta = Yii::$app->urlManager->createAbsoluteUrl ( [
+						'site/ver-imagen?token=' . $usuario->id_usuario
+				] );
+				
+				$message = urlencode ( "Puedes ver tu imagen desde aqui: " . $urlCorta );
+				$url = 'http://sms-tecnomovil.com/SvtSendSms?username=PIXERED&password=Pakabululu01&message=' . $message . '&numbers=' . $usuario->tel_numero_telefonico;
+				
+				$sms = file_get_contents ( $url );
+			
+				return ['status'=>'success'];
 				//$this->goHome();
 			}
 			
@@ -152,10 +165,10 @@ class SiteController extends Controller {
 	imagejpeg($lienzo, 'fotosUsuarios/template'.$nombreImagenFinal.'.jpg');
 	
 	$template = imagecreatefromjpeg('fotosUsuarios/template'.$nombreImagenFinal.'.jpg');
-	
+	ini_set('memory_limit', '-1');
 	$src = imagecreatefrompng($imagePng);
-	echo imagecopyresampled($template, $src, 0, 0, 0, 0, 100, 100, $width_y, $height_y);
-	imagejpeg($lienzo, 'fotosUsuarios/'.$nombreImagenFinal.'.jpg');
+	imagecopyresampled($template, $src, 0, 0, 0, 0, $width_y, $height_y, $width_y, $height_y);
+	imagejpeg($template, 'fotosUsuarios/'.$nombreImagenFinal.'.jpg');
 	
 	imagedestroy($dest);
 	imagedestroy($src);
@@ -192,12 +205,9 @@ class SiteController extends Controller {
 	}
 	
 	public function actionTest(){
-		
-		$fotografiaSeleccionada = $this->getFotoById(70);
-		$marcoSeleccionado = $this->getMarcoById(1);
-		
-		
-		$this->guardarImagenUsuario($fotografiaSeleccionada, $marcoSeleccionado);
+		$this->rezisePicture ( 'webAssets/images/marcos/marco-1.png', 1280, 960, 1280, 'marco-1.png' );
+		$this->rezisePicture ( 'webAssets/images/marcos/marco-2.png', 1280, 960, 1280, 'marco-2.png' );
+		$this->rezisePicture ( 'webAssets/images/marcos/marco-3.png', 1280, 960, 1280, 'marco-3.png' );
 	}
 	
 	
@@ -219,10 +229,11 @@ class SiteController extends Controller {
 	
 		// Cargar
 		$thumb = imagecreatetruecolor ( $nuevo_ancho, $nuevo_alto );
-		$origen = imagecreatefromjpeg ( $file );
+		$origen = imagecreatefrompng( $file );
 		// Cambiar el tamaño
 		imagecopyresampled ( $thumb, $origen, 0, 0, 0, 0, $nuevo_ancho, $nuevo_alto, $ancho, $alto );
 		imagejpeg ( $thumb, $nombreNuevo );
+		
 	}
 	
 	/**
@@ -242,5 +253,26 @@ class SiteController extends Controller {
 		return $factor;
 	}
 	
+	private function getImagenUsuario($token){
+		if (($imagen = EntUsuarios::find ()->where ( [
+				'id_usuario' => $token
+		] )->one ()) !== null) {
+			return $imagen;
+		} else {
+			throw new NotFoundHttpException( 'The requested page does not exist.' );
+		}
+	}
+
+	public function actionVerImagen($token=null){
+		
+		$imagen = $this->getImagenUsuario($token);
+		
+		return $this->render('verImagen', ['imagen'=>$imagen]);
+		
+	}
+	
+	public function actionHome(){
+		return $this->goHome();
+	}
 	
 }
