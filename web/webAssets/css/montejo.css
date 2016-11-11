@@ -836,6 +836,21 @@ hr {
   animation-delay: 1.30s;
 }
 
+.registro .registro-cont .registro-box .delay-7 {
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+}
+
+.registro .registro-cont .registro-box .delay-8 {
+  -webkit-animation-delay: 0.35s;
+  animation-delay: 0.35s;
+}
+
+.registro .registro-cont .registro-box .delay-9 {
+  -webkit-animation-delay: 0.55s;
+  animation-delay: 0.55s;
+}
+
 .registro .registro-cont .registro-box .registro-body .registro-body-form {
   padding: 24px 20px 4px;
   /* Landscape */
@@ -890,7 +905,6 @@ hr {
   font-size: .95em;
   padding: 6px 10px 4px;
 }
-
 
 .registro .registro-cont .registro-box .registro-body .registro-body-form .aviso-privacidad {
   bottom: 20px;
@@ -1018,6 +1032,7 @@ hr {
 
 .registro .registro-cont .registro-box .registro-body .registro-body-form .aviso-privacidad-cont .aviso-privacidad-mask {
   bottom: 0;
+  cursor: pointer;
   height: 100%;
   left: 0;
   position: absolute;
@@ -1029,6 +1044,53 @@ hr {
 
 .registro .registro-cont .registro-box .registro-body .registro-body-form .btn-primary {
   margin-top: 25px;
+  padding: 12px 1rem;
+  width: 100%;
+}
+
+.registro .registro-cont .registro-box .registro-body .registro-body-succes {
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  height: 364px;
+  justify-content: space-around;
+  padding: 34px 30px 30px;
+}
+
+.registro .registro-cont .registro-box .registro-body .registro-body-succes .registro-body-succes-cont {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3em 0;
+}
+
+.registro .registro-cont .registro-box .registro-body .registro-body-succes .registro-body-succes-cont .registro-body-succes-cont-icon {
+  align-items: center;
+  background-color: #1F1475;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  color: #FFF;
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  width: 55px;
+}
+
+.registro .registro-cont .registro-box .registro-body .registro-body-succes .registro-body-succes-cont .registro-body-succes-cont-icon i {
+  font-size: 2.6em;
+}
+
+.registro .registro-cont .registro-box .registro-body .registro-body-succes .registro-body-succes-cont p {
+  color: #1F1475;
+  font-size: 1.3em;
+  margin-top: 35px;
+}
+
+.registro .registro-cont .registro-box .registro-body .registro-body-succes .registro-body-succes-btn {
+  margin-bottom: -24px;
   padding: 12px 1rem;
   width: 100%;
 }

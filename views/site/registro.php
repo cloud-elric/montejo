@@ -28,61 +28,84 @@ $this->registerJsFile ( '@web/webAssets/js/montejo.js', [
 
 				<!-- .registro-body -->
 				<div class="registro-body">
-						 <?php
-							
-							$form = ActiveForm::begin ( [ 
-									'options' => [ 
-											'class' => 'registro-body-form' 
-									],
-									'fieldConfig' => [ 
-											
-											'options' => [ 
-													'class' => 'registro-body-form-input' 
-											] 
-									] 
-							] );
-							?>
+					<?php
+
+						$form = ActiveForm::begin ( [ 
+						'options' => [ 
+						'class' => 'registro-body-form' 
+						],
+						'fieldConfig' => [ 
+
+						'options' => [ 
+						'class' => 'registro-body-form-input' 
+						] 
+						] 
+						] );
+					?>
 						<?=$form->field($usuario, 'txt_nombre')->textInput(['class'=>'animated', 'placeholder'=>'Nombre'])->label(false)?>
 						<?=$form->field($usuario, 'txt_apellido')->textInput(['class'=>'animated', 'placeholder'=>'Apellido'])->label(false)?>
 						<?=$form->field($usuario, 'tel_numero_telefonico')->textInput(['class'=>'animated', 'placeholder'=>'Teléfono (10 digitos)', 'maxlength'=>10])->label(false)?>
 						<?=$form->field($usuario, 'txt_email')->textInput(['class'=>'animated', 'placeholder'=>'Correo eléctronico'])->label(false)?>
 
-					<!-- .aviso-privacidad-cont -->
-					<div
-						class="aviso-privacidad-cont registro-body-form-input animated">
-						<ul class="list">
-							<li class="list__item"><label class="label--checkbox">
+						<!-- .aviso-privacidad-cont -->
+						<div
+							class="aviso-privacidad-cont registro-body-form-input animated">
+							<ul class="list">
+								<li class="list__item"><label class="label--checkbox">
 
-									<div class="label--checkbox-row">
-										<div class="label--checkbox-row-col">
-											<input type="checkbox" id="acepta-ap-checkbox"
-												class="checkbox">
+										<div class="label--checkbox-row">
+											<div class="label--checkbox-row-col">
+												<input type="checkbox" id="acepta-ap-checkbox"
+													class="checkbox">
+											</div>
+											<div class="label--checkbox-row-col">
+												<span>Acepta Terminos y condiciones</span>
+											</div>
 										</div>
-										<div class="label--checkbox-row-col">
-											<span>Acepta Terminos y condiciones</span>
-										</div>
-									</div>
-							</label></li>
-						</ul>
-						<!-- <p>Campo requerido</p> -->
-						<div class="aviso-privacidad-mask"></div>
-					</div>
-					<!-- end - .aviso-privacidad-cont -->
-
-					<!-- Errores -->
-<!-- 					<div class="help-block help-block-error">Otro lindo mensaje de -->
-<!-- 						error</div> -->
-
-					<!-- Btn de Mandar FOTO -->
-					<div class="animated">
-						<button id="registro-btn" class="btn btn-primary ladda-button"
-							data-style="zoom-out">
-							<span class="ladda-label">Mandar Foto</span>
-						</button>
-					</div>
-
-							<?php ActiveForm::end(); ?>
+								</label></li>
+							</ul>
+							<!-- <p>Campo requerido</p> -->
+							<div class="aviso-privacidad-mask"></div>
 						</div>
+						<!-- end - .aviso-privacidad-cont -->
+
+						<!-- Errores -->
+	<!-- 					<div class="help-block help-block-error">Otro lindo mensaje de -->
+	<!-- 						error</div> -->
+
+						<!-- Btn de Mandar FOTO -->
+						<div class="animated">
+							<button id="registro-btn" class="btn btn-primary ladda-button"
+								data-style="zoom-out">
+								<span class="ladda-label">Mandar Foto</span>
+							</button>
+						</div>
+
+					<?php ActiveForm::end(); ?>
+
+
+					<!-- .aqua-body-succes -->
+					<div class="registro-body-succes">
+						<!-- .registro-body-succes-cont -->
+						<div class="registro-body-succes-cont">
+							<!-- .registro-body-succes-cont -->
+							<div class="registro-body-succes-cont-icon animated">
+								<i class="ion ion-checkmark"></i>
+							</div>
+							<!-- end - .registro-body-succes-cont -->
+							<p class="animated">Registro Exitoso</p>
+						</div>
+						<!-- end - .registro-body-succes-cont -->
+
+						<!-- .registro-body-succes-btn -->
+						<button class="btn btn-primary registro-body-succes-btn js-btn-continuar ladda-button animated" data-style="zoom-out">
+							<span class="ladda-label">Continuar</span>
+						</button>
+						<!-- end - .registro-body-succes-btn -->
+					</div>
+					<!-- end - .registro-body-succes -->
+
+				</div>
 				<!-- end - .registro-body -->
 
 			</div>
