@@ -17,7 +17,7 @@ $this->registerJsFile ( '@web/webAssets/js/sharing.js', [
 <div class="animsition">
 
 	<!-- .wrap -->
-	<div class="wrap compartir">
+	<div class="compartir">
 
 		<!-- .compartir-cont -->
 		<div class="compartir-cont">
@@ -29,9 +29,8 @@ $this->registerJsFile ( '@web/webAssets/js/sharing.js', [
 			<!-- end - .compartir-marco -->
 
 			<!-- .compartir-foto -->
-			<div class="compartir-foto"
-				style="background-image: url(<?=Url::base()?>/fotosUsuarios/<?=$imagen->txt_url_image?>)">
-				<!-- <img src="assets/images/foto.jpg" alt="Foto"> -->
+			<div class="compartir-foto">
+				<img src="<?=Url::base()?>/fotosUsuarios/<?=$imagen->txt_url_image?>" alt="Foto">
 			</div>
 			<!-- end - .compartir-foto -->
 
